@@ -13,3 +13,4 @@ variable profile_name {
 variable tags {}
 
 variable security_group_id {}
+variable zone {}
