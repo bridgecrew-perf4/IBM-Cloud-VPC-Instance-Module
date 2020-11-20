@@ -8,7 +8,7 @@ resource "ibm_is_instance" "instance" {
   resource_group = data.ibm_resource_group.group.id
 
   # inject dns config
-  user_data = file("${path.module}/instance-init.sh")
+  user_data = file("instance-init.sh")
 
   primary_network_interface {
     subnet          = var.subnet_id
