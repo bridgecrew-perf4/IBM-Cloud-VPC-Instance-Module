@@ -7,8 +7,7 @@ resource "ibm_is_instance" "instance" {
   keys           = [data.ibm_is_ssh_key.key.id]
   resource_group = data.ibm_resource_group.group.id
 
-  # inject dns config
-  user_data = file("instance-init.sh")
+  user_data = var.user_data
 
   primary_network_interface {
     subnet          = var.subnet_id
