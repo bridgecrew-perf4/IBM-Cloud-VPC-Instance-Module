@@ -5,7 +5,7 @@ resource "ibm_is_instance" "instance" {
   profile        = var.profile_name
   image          = data.ibm_is_image.image.id
   keys           = var.ssh_keys
-  resource_group = data.ibm_resource_group.group.id
+  resource_group = var.resource_group
 
   user_data = var.user_data
 
