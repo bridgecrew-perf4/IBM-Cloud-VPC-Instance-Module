@@ -1,5 +1,5 @@
 resource "ibm_is_instance" "instance" {
-  name           = "${var.name}-${var.zone}-instance"
+  name           = var.name
   vpc            = var.vpc_id
   zone           = var.zone
   profile        = var.profile_name
@@ -15,8 +15,8 @@ resource "ibm_is_instance" "instance" {
   }
 
   boot_volume {
-    name = "${var.name}-${var.zone}-boot"
+    name = "${var.name}-boot-volume"
   }
 
-  tags = concat(var.tags, ["instance"])
+  tags = concat(var.tags, ["instance", "zone:${var.zone}"])
 }
