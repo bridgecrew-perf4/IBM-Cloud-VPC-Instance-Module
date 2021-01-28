@@ -29,7 +29,6 @@ module traefik {
 }
 ```
 
-https://github.com/cloud-design-dev/IBM-Cloud-VPC-Instance-Module/blob/main/init.yml
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -40,7 +39,7 @@ https://github.com/cloud-design-dev/IBM-Cloud-VPC-Instance-Module/blob/main/init
 | name | Name of the virtual server instance | `string` | n/a | yes |
 | zone | VPC zone where the virtual server instance will be created.
 | image\_name | Name of the image to use for the virtual server instance | `string` | `"ibm-ubuntu-20-04-minimal-amd64-2"` | no |
-| user\_data\_script | Script to run during the virtual server instance initialization. Defaults to an Ubuntu specific script when set to empty | `string` | `""` | no |
+| user\_data\_script | Script to run during the virtual server instance initialization. Defaults to an [Ubuntu specific script](https://github.com/cloud-design-dev/IBM-Cloud-VPC-Instance-Module/blob/main/init.yml) when set to empty | `string` | `""` | no |
 | profile\_name | Instance profile to use for the virtual server instance | `string` | `"cx2-2x4"` | no |
 | ssh\_keys\ | List of SSH key IDs to inject into the virtual server instance | `list(string)` | n/a | yes |
 | tags | List of tags to add on all created resources | `list(string)` | `[]` | no |
