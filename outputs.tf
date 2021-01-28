@@ -9,3 +9,7 @@ output primary_ip4_address {
 output instance {
   value = ibm_is_instance.instance
 }
+
+output id {
+  value = ibm_is_instance.instance.id
+  }
