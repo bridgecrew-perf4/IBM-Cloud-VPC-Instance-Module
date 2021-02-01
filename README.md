@@ -15,7 +15,7 @@ data "ibm_is_zones" "mzr" {
   region = var.region
 }
 
-module traefik {
+module instance {
   source            = "git::https://github.com/cloud-design-dev/ibm-vpc-instance-module.git"
   vpc_id            = var.vpc_id
   subnet_id         = var.subnet_id
