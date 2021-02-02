@@ -1,5 +1,5 @@
 # Compute Instance Module for IBM CLoud VPC 
-Terraform module for creating a VPC compute instance in IBM Cloud. 
+Terraform module for deploying a compute instance in to an IBM Cloud VPC.  
 
 ## Usage
 If you need to include an IBM Cloud VPC Instance in your deployment you can use the following code:
