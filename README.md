@@ -16,7 +16,7 @@ data "ibm_is_zones" "mzr" {
 }
 
 module instance {
-  source            = "git::https://github.com/cloud-design-dev/ibm-vpc-instance-module.git"
+  source            = "git::https://github.com/cloud-design-dev/IBM-Cloud-VPC-Instance-Module.git"
   vpc_id            = var.vpc_id
   subnet_id         = var.subnet_id
   ssh_keys          = [var.ssh_key]
