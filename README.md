@@ -23,7 +23,7 @@ module instance {
   resource_group    = data.ibm_resource_group.group.id
   name              = var.name
   zone              = data.ibm_is_zones.mzr.zones[2]
-  security_groups = var.security_groups
+  security_group_id = var.security_group_id
   tags              = concat(var.tags, ["project:${var.name}"])
   user_data         = var.user_data
 }
@@ -37,7 +37,8 @@ module instance {
 | vpc\_id | ID of the VPC where to create the virtual server instance | `string` | n/a | yes |
 | subnet\_id | ID of the subnet that will be attached to the virtual server instance | `string` | n/a | yes |
 | name | Name of the virtual server instance | `string` | n/a | yes |
-| zone | VPC zone where the virtual server instance will be created.
+| zone | VPC zone where the virtual server instance will be created. | `string` | n/a | yes |
+| security\_group\_id | ID of the security group to attach to the primary interface | `string` | `""` | yes | 
 | image\_name | Name of the image to use for the virtual server instance | `string` | `"ibm-ubuntu-20-04-minimal-amd64-2"` | no |
 | user\_data\_script | Script to run during the virtual server instance initialization. Defaults to an [Ubuntu specific script](https://github.com/cloud-design-dev/IBM-Cloud-VPC-Instance-Module/blob/main/init.yml) when set to empty | `string` | `""` | no |
 | profile\_name | Instance profile to use for the virtual server instance | `string` | `"cx2-2x4"` | no |
