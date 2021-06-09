@@ -19,5 +19,5 @@ resource "ibm_is_instance" "instance" {
     name = "${var.name}-boot-volume"
   }
 
-  tags = concat(var.tags, ["instance", "zone:${var.zone}"])
+  tags = var.tags
 }
