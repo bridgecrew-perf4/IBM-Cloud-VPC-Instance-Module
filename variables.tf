@@ -11,6 +11,6 @@ variable "profile_name" {
   default = "cx2-2x4"
 }
 variable "tags" {}
-variable "security_group" {}
+variable "security_groups" {}
 variable "zone" {}
 variable "user_data" {}
