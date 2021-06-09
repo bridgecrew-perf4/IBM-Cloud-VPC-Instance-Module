@@ -12,7 +12,7 @@ resource "ibm_is_instance" "instance" {
 
   primary_network_interface {
     subnet          = var.subnet_id
-    security_groups = [var.security_group_id != null ? var.security_group_id : null]
+    security_groups = [var.security_groups != null ? var.security_groups : null]
   }
 
   boot_volume {
