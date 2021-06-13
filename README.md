@@ -40,7 +40,8 @@ module instance {
 | zone | VPC zone where the virtual server instance will be created. | `string` | n/a | yes |
 | security\_group\_id | ID of the security group to attach to the primary interface | `string` | `""` | yes | 
 | image\_name | Name of the image to use for the virtual server instance | `string` | `"ibm-ubuntu-20-04-minimal-amd64-2"` | no |
-| user\_data\_script | Script to run during the virtual server instance initialization. Defaults to an [Ubuntu specific script](https://github.com/cloud-design-dev/IBM-Cloud-VPC-Instance-Module/blob/main/init.yml) when set to empty | `string` | `""` | no |
+| user\_data | Script to run during the virtual server instance initialization. Defaults to an [Ubuntu specific script](https://github.com/cloud-design-dev/IBM-Cloud-VPC-Instance-Module/blob/main/init.yml) when set to empty | `string` | `""` | no |
+| allow\_ip\_spoofing  |  Indicates whether IP spoofing is allowed on this interface primary network interface. | `bool` | `false` | no |
 | profile\_name | Instance profile to use for the virtual server instance | `string` | `"cx2-2x4"` | no |
 | ssh\_keys\ | List of SSH key IDs to inject into the virtual server instance | `list(string)` | n/a | yes |
 | tags | List of tags to add on all created resources | `list(string)` | `[]` | no |
