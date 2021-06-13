@@ -6,6 +6,7 @@ resource "ibm_is_instance" "instance" {
   image          = data.ibm_is_image.image.id
   keys           = var.ssh_keys
   resource_group = var.resource_group
+  allow_ip_spoofing = != "" ? var.allow_ip_spoofing : false
 
   user_data = var.user_data != "" ? var.user_data : file("${path.module}/init.yml")
   
