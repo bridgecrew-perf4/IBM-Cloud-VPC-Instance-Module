@@ -17,5 +17,4 @@ variable "user_data" {}
 variable "allow_ip_spoofing" {
   type = bool
   description = "(Optional, bool) Indicates whether IP spoofing is allowed on this interface."
-  default = false
 }
