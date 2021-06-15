@@ -1,6 +1,4 @@
-[![terraform-14](https://github.com/cloud-design-dev/IBM-Cloud-VPC-Instance-Module/actions/workflows/terraform-14.yml/badge.svg)](https://github.com/cloud-design-dev/IBM-Cloud-VPC-Instance-Module/actions/workflows/terraform-14.yml)
-
-[![terraform-15](https://github.com/cloud-design-dev/IBM-Cloud-VPC-Instance-Module/actions/workflows/terraform-15.yml/badge.svg)](https://github.com/cloud-design-dev/IBM-Cloud-VPC-Instance-Module/actions/workflows/terraform-15.yml)
+[![terraform-14](https://github.com/cloud-design-dev/IBM-Cloud-VPC-Instance-Module/actions/workflows/terraform-14.yml/badge.svg)](https://github.com/cloud-design-dev/IBM-Cloud-VPC-Instance-Module/actions/workflows/terraform-14.yml)  [![terraform-15](https://github.com/cloud-design-dev/IBM-Cloud-VPC-Instance-Module/actions/workflows/terraform-15.yml/badge.svg)](https://github.com/cloud-design-dev/IBM-Cloud-VPC-Instance-Module/actions/workflows/terraform-15.yml)
 
 # Compute Instance Module for IBM CLoud VPC 
 Terraform module for deploying a compute instance in to an IBM Cloud VPC.  
