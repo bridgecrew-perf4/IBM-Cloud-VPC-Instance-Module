@@ -6,14 +6,14 @@ resource "ibm_is_instance" "instance" {
   image          = data.ibm_is_image.image.id
   keys           = var.ssh_keys
   resource_group = var.resource_group
-  
+
 
   user_data = var.user_data != "" ? var.user_data : file("${path.module}/init.yml")
-  
+
 
   primary_network_interface {
-    subnet          = var.subnet_id
-    security_groups = var.security_groups != null ? var.security_groups : null
+    subnet            = var.subnet_id
+    security_groups   = var.security_groups != null ? var.security_groups : null
     allow_ip_spoofing = var.allow_ip_spoofing != "" ? var.allow_ip_spoofing : false
   }
 
