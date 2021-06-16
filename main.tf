@@ -21,5 +21,6 @@ resource "ibm_is_instance" "instance" {
     name = "${var.name}-boot-volume"
   }
 
+  force_recovery_time = var.force_recovery_time
   tags = var.tags
 }
