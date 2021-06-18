@@ -5,7 +5,7 @@ resource "ibm_is_instance" "instance" {
   profile        = var.profile_name
   image          = data.ibm_is_image.image.id
   keys           = var.ssh_keys
-  resource_group = var.resource_group
+  resource_group = var.resource_group_id
   
 
   user_data = var.user_data != "" ? var.user_data : file("${path.module}/init.yml")
