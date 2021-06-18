@@ -38,7 +38,7 @@ variable "allow_ip_spoofing" {
 }
 
 variable "force_recovery_time" {
-  type = int 
+  type = string 
   description = "Timeout (in minutes), to force the is_instance to recover from a perpetual `starting` state."
-  default = 30
+  default = "30"
 }
