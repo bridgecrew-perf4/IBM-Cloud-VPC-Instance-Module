@@ -19,7 +19,7 @@ variable "resource_group_id" {
 }
 
 variable "ssh_keys" {
-  type = string
+  type = list(string)
   description = "SSH Key ID that will be inserted in to the compute instance."
 }
 variable "image_name" {
