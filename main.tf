@@ -13,7 +13,7 @@ resource "ibm_is_instance" "instance" {
 
   primary_network_interface {
     subnet          = var.subnet_id
-    security_groups = var.security_groups != null ? var.security_groups : null
+    security_groups = var.security_groups
     allow_ip_spoofing = var.allow_ip_spoofing != "" ? var.allow_ip_spoofing : false
   }
 
